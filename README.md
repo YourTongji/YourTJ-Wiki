@@ -6,7 +6,7 @@ YourTJ 同济校园社区的知识库 / Wiki 内容仓库。
 
 ## 目录结构
 
-```
+```text
 YourTJ-Wiki/
 ├── README.md
 ├── CONTRIBUTING.md          # 编辑指南、PR 流程、frontmatter 规范

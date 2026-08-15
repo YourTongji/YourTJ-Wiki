@@ -9,15 +9,15 @@
 1. 在仓库根目录新建一个顶层目录（即命名空间），如 `新生指南/`；
 2. 在目录内创建 `.md` 文件，带 frontmatter：
 
-```markdown
----
-title: 我的页面
-order: 10
-description: 一句话摘要
----
+   ```markdown
+   ---
+   title: 我的页面
+   order: 10
+   description: 一句话摘要
+   ---
 
-正文内容…
-```
+   正文内容…
+   ```
 
 3. 提交并开 PR，merge 后线上自动同步。
 
