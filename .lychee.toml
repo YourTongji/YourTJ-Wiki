@@ -4,6 +4,17 @@ exclude = [
   '^#',       # 页内锚点
   '^\./',     # 相对路径（仓库内文件）
   '^\.\./',   # 相对路径（仓库内文件）
+  # 以下校内系统在公网 CI 环境不可达（需校园网/VPN，或部署反爬/自签证书），
+  # 链接为校内官方入口，由内容维护者保证有效性：
+  '^https?://youth\.tongji\.edu\.cn',     # 校团委（403 反爬，仅校内）
+  '^https?://cxcy\.tongji\.edu\.cn',      # 大创管理系统（仅校园网）
+  '^https?://xlzx\.tongji\.edu\.cn',      # 心理咨询预约系统（仅校园网）
+  '^https?://freshman\.tongji\.edu\.cn',  # 迎新网（仅校园网）
+  '^https?://ir\.tongji\.edu\.cn',        # 机构知识库（仅校园网）
+  '^https?://space\.tongji\.edu\.cn',     # 空间预约系统（自签证书）
+  '^https?://shsj\.tongji\.edu\.cn',      # 社会实践系统（重定向至低代码平台）
+  '^https?://canvas\.tongji\.edu\.cn',    # Canvas 学习平台（401，需统一身份认证）
+  '^https?://software\.tongji\.edu\.cn',  # 正版软件平台（仅校园网）
 ]
 # 不扫描 node_modules（npm 包自带文档与本站无关）
 exclude_path = ["node_modules"]
