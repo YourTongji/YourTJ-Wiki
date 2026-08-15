@@ -4,6 +4,7 @@ exclude = [
   '^#',       # 页内锚点
   '^\./',     # 相对路径（仓库内文件）
   '^\.\./',   # 相对路径（仓库内文件）
+  '^https?://(1|mail|vpn|dk)\.tongji\.edu\.cn',  # 校内系统（教务/邮箱/VPN/留德部），公网与 CI 无法访问
 ]
 # 不扫描 node_modules（npm 包自带文档与本站无关）
 exclude_path = ["node_modules"]
