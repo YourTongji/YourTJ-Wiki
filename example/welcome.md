@@ -1,8 +1,3 @@
----
-title: 欢迎[Main E2E]
-order: 10
----
-
 # YourTJ Wiki 内容示例（可删除）
 
 ## 这是什么
