@@ -5,5 +5,11 @@ exclude = [
   '^\./',     # 相对路径（仓库内文件）
   '^\.\./',   # 相对路径（仓库内文件）
 ]
+# 不扫描 node_modules（npm 包自带文档与本站无关）
+exclude_path = ["node_modules"]
+# 限速防卡死：外部站点慢/证书坏时快速失败，不拖垮 CI
+max_concurrency = 8
+timeout = 20
+max_retries = 1
 # 隐私：不把请求发给统计端点
 no_progress = true
