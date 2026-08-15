@@ -1,0 +1,15 @@
+# 死链检查：只检查绝对 URL（http/https/mailto），
+# 相对链接由 Git 仓库本身保证存在，不检查锚点片段。
+exclude = [
+  '^#',       # 页内锚点
+  '^\./',     # 相对路径（仓库内文件）
+  '^\.\./',   # 相对路径（仓库内文件）
+]
+# 不扫描 node_modules（npm 包自带文档与本站无关）
+exclude_path = ["node_modules"]
+# 限速防卡死：外部站点慢/证书坏时快速失败，不拖垮 CI
+max_concurrency = 8
+timeout = 20
+max_retries = 1
+# 隐私：不把请求发给统计端点
+no_progress = true

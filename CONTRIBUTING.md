@@ -26,9 +26,27 @@
 - 敏感信息（手机号/学号/密码/内部链接）不要写进 wiki；
 - 涉及课程评价等争议内容，请客观描述事实、避免情绪化表述。
 
+## 自动检查（CI）
+
+每个 PR 都会自动运行以下质量检查（全部通过才能 merge）：
+
+- **markdownlint**：Markdown 语法/风格（标题层级、列表、代码块标注、空行等）；
+- **textlint（中文排版）**：中西文/数字间空格、全角英文、不成对引号、空段落等；
+- **lychee**：外链死链检查。
+
+本地预览检查（需 Node.js 22+）：
+
+```bash
+npm ci
+npm run lint:md   # markdownlint
+npm run lint:zh   # textlint 中文排版
+```
+
+检查规则见 `.markdownlint-cli2.jsonc` / `.textlintrc.json` / `.lychee.toml`，需要放宽规则时在 PR 中说明理由。
+
 ## 审核约定
 
-- 默认 merge 需 ≥1 人 review（branch protection）；
+- 默认 merge 需 ≥2 人 review（branch protection）；
 - 结构变更（新命名空间、目录重组、批量移动）建议在 PR 描述中说明意图；
 - 有争议内容开 Issue 讨论，不在 PR 里争执。
 

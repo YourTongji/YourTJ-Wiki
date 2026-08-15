@@ -1,0 +1,13 @@
+{
+  // Wiki 文档仓库 markdownlint 配置（中文友好）：
+  // 文档内容不受行宽/标题标点约束，重点保留结构、链接、空行、列表规则。
+  "config": {
+    "MD013": false, // line-length：文档内容不限行长（中文长行常见）
+    "MD026": false, // heading trailing punctuation：中文标题允许带问号/感叹号
+    "MD033": false, // inline HTML：表格/徽章等场景允许
+    "MD060": false, // table-column-style：紧凑表格（中文用户手写常见）不强制
+    "MD024": true,  // no-duplicate-heading：同文件避免重复标题
+    "MD040": true   // fenced code language：代码块必须标注语言
+  },
+  "globs": ["**/*.md", "!**/.git/**", "!assets/**", "!node_modules/**"]
+}
