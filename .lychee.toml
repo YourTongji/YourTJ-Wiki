@@ -11,6 +11,14 @@ exclude = [
   '^https?://([^/]*\.)*tongji\.edu\.cn',
   '^https?://www\.cnki\.net',       # 中国知网：SSL 证书异常
   '^https?://scholar\.google\.com', # Google Scholar：反爬返回 403
+  # 中国境内学习/招生平台：公网 CI 与本地网络均偶发超时/连接失败，链接为官方入口，不做死链校验
+  '^https?://(www\.)?ilab-x\.com',                # iLAB-X 虚拟仿真实验平台
+  '^https?://(www\.)?icourse163\.org',            # 中国大学 MOOC
+  '^https?://i\.chaoxing\.com',                   # 学习通
+  '^https?://www\.ketangpai\.com',                # 课堂派
+  '^https?://www\.wanfangdata\.com\.cn',          # 万方数据
+  '^https?://yz\.chsi\.com\.cn',                  # 学信网（研招）
+  '^https?://(admissions\.sjtu\.edu\.cn|ao\.fudan\.edu\.cn)', # 交大/复旦本科招生办
 ]
 # 不扫描 node_modules（npm 包自带文档与本站无关）
 exclude_path = ["node_modules"]
