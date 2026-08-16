@@ -1,6 +1,5 @@
 ---
 title: 同济新手教程
-slug: freshman-guide
 order: 10
 description: 面向同济大学学生的校园百科：学校、学业、校园设施、校园生活、服务与资源五大板块
 ---
