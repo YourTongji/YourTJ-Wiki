@@ -22,12 +22,12 @@ jobs:
         run: npm ci
 
       - name: markdownlint (语法/风格)
-        run: npx markdownlint-cli2 "**/*.md" "#**/.git/**" "#assets/**"
+        run: npm run lint:md
 
       - name: textlint-zh (中文排版规范)
-        run: npx textlint "**/*.md" "!assets/**"
+        run: npm run lint:zh
 
       - name: lychee (死链检查)
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --config .lychee.toml --no-progress "**/*.md"
+          args: --config .lychee.toml --no-progress "**/*.md" ".agents/**/*.md"

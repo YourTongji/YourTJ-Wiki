@@ -1,0 +1,3 @@
+interface:
+  display_name: "YourTJ Wiki 编辑"
+  short_description: "编辑同济 Wiki 页面，运行与 CI 一致的检查并诊断失败"

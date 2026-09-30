@@ -21,7 +21,7 @@
 ## 页面规范
 
 - 必须带 YAML frontmatter：`title`（必填）、`order`（排序权重，可选）、`description`（摘要，可选）；
-- 使用 GitHub Flavored Markdown：标题层级从 `#` 开始（页面大标题用 `#`）；
+- 使用 GitHub Flavored Markdown：frontmatter 的 `title` 已作为页面主标题，正文从 `##` 开始，下一级用 `###`，不要重复使用 `#`；
 - 代码块标注语言；图片放 `assets/` 并用相对路径引用；
 - 敏感信息（手机号/学号/密码/内部链接）不要写进 wiki；
 - 涉及课程评价等争议内容，请客观描述事实、避免情绪化表述。
@@ -43,6 +43,26 @@ npm run lint:zh   # textlint 中文排版
 ```
 
 检查规则见 `.markdownlint-cli2.jsonc` / `.textlintrc.json` / `.lychee.toml`，需要放宽规则时在 PR 中说明理由。
+
+CI 直接调用上述两个 npm 检查命令，检查范围包含 `.agents/` 中的 skill 文档。已安装 lychee 时可按 CI 参数检查链接：
+
+```bash
+lychee --config .lychee.toml --no-progress "**/*.md" ".agents/**/*.md"
+```
+
+未在本地运行链接检查时，以 PR 最新提交的 CI 结果为准。还需确认改动涉及的仓库内相对链接和资源实际存在。
+
+## 使用仓库内 skill
+
+支持仓库技能的编辑助手可使用 [yourtj-wiki-editing](.agents/skills/yourtj-wiki-editing/SKILL.md)，覆盖页面编辑、与 CI 一致的检查和失败诊断；根目录 [AGENTS.md](AGENTS.md) 提供入口，无需全局安装。
+
+在支持技能调用的助手中可直接输入：
+
+```text
+使用 $yourtj-wiki-editing 更新“同济新手教程/校园设施/乐器.md”，并运行本地检查。
+```
+
+提交、推送、创建 PR、留言或合并仍以用户已有授权为准。
 
 ## 审核约定
 
