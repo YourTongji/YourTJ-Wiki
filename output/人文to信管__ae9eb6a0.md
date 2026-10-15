@@ -18,7 +18,7 @@
 
 <img src="assets/人文to信管__ae9eb6a0/media/image1.png" style="width:6.67224in;height:2.41146in" alt="C:\Users\HUJIATONG\Documents\xwechat_files\wxid_jfdx2ghop8e712_c5b3\temp\InputTemp\5b01e523-0f55-4615-89c9-8d5bd344349a.png" />
 
-转专业千万不要盲目跟风，要进行理性客观的分析，**倾听自己内心最真实的声音，**可以问问自己：
+转专业千万不要盲目跟风，要进行理性客观的分析，倾听自己内心最真实的声音，可以问问自己：
 
 ①现专业不适合自己的根源何在？
 
