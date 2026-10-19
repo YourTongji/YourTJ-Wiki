@@ -1,4 +1,7 @@
 node_modules/
 
+# Intermediate document conversion output
+/output/
+
 # macOS
 .DS_Store
