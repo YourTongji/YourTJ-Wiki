@@ -11,6 +11,10 @@ exclude = [
   '^https?://([^/]*\.)*tongji\.edu\.cn',
   '^https?://www\.cnki\.net',       # 中国知网：SSL 证书异常
   '^https?://scholar\.google\.com', # Google Scholar：反爬返回 403
+  # 以下三个知乎链接已由维护者在浏览器中确认可访问，自动检查返回 403，仅排除这些具体 URL。
+  '^https://zhuanlan\.zhihu\.com/p/1962551920490185426$',
+  '^https://www\.zhihu\.com/question/409298856$',
+  '^https://www\.zhihu\.com/question/56968416$',
   # 中国境内学习/招生平台：公网 CI 与本地网络均偶发超时/连接失败，链接为官方入口，不做死链校验
   '^https?://(www\.)?ilab-x\.com',                # iLAB-X 虚拟仿真实验平台
   '^https?://(www\.)?icourse163\.org',            # 中国大学 MOOC
