@@ -15,12 +15,9 @@ exclude = [
   '^https://zhuanlan\.zhihu\.com/p/1962551920490185426$',
   '^https://www\.zhihu\.com/question/409298856$',
   '^https://www\.zhihu\.com/question/56968416$',
-<<<<<<< HEAD
   # 乌龙茶网页版（tongji.icu）已下线（返回 402）：老乌龙茶历史文档按约定保持原样，
   # 链接仅作历史记录保留，不做死链校验，仅排除这一具体 URL。
   '^https://www\.tongji\.icu/$',
-=======
->>>>>>> 5de21031a5fc96cd613148c190a8d41ae5d282c5
   # 中国境内学习/招生平台：公网 CI 与本地网络均偶发超时/连接失败，链接为官方入口，不做死链校验
   '^https?://(www\.)?ilab-x\.com',                # iLAB-X 虚拟仿真实验平台
   '^https?://(www\.)?icourse163\.org',            # 中国大学 MOOC
